@@ -115,7 +115,7 @@
         <tr>
           <td align="right"
             style="margin-top: 5rem; font-size: 12px; padding-left: 1rem; color: #888888; width: auto; white-space: nowrap;">
-            <a href="https://www.maeil-mail.kr/question/mine?email={여기email}" style="
+            <a th:href="@{https://www.maeil-mail.kr/question/mine/{email}(email = ${email})}" style="
               color: #888888;
               text-decoration: none;
               ">
@@ -126,7 +126,7 @@
                 text-underline-offset: 3px;
                 text-decoration-thickness: 0.3px;
                 ">
-                질문 모아보기
+                📮 질문 모아보기
               </div>
             </a>
             &nbsp;
@@ -149,7 +149,7 @@
             &nbsp;
             <span>|</span>
             &nbsp;
-            <a href="https://www.maeil-mail.kr/unsubscribe?email={여기이메일}&token={여기토큰}" target="_blank" style="
+            <a th:href="@{https://www.maeil-mail.kr/unsubscribe(email=${email}, token=${token})}" target="_blank" style="
             color: #888888;
             text-decoration: none;
             ">
@@ -166,16 +166,6 @@
           </td>
         </tr>
       </table>
-      <div style="
-      margin-top: 5rem;
-      font-size: 12px;
-      display: flex;
-      gap: 1rem;
-      color: #888888;
-      flex-direction: row-reverse;
-      ">
-
-      </div>
     </div>
   </div>
 </body>
