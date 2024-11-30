@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- 
   아톰과 할일
-  1. 요일별 질문 채우기
-  2. 제목에 분야(BE/FE) 및 주차 채우기
-  3. 설정 링크에 이메일 토큰 채워넣기 (데일리 메일도 수정해야 함!)
+  1. 요일별 질문 채우기 (기존 텍스트는 삭제)
+  2. 제목에 분야(BE/FE) 및 주차 채우기 (기존 텍스트는 삭제)
+  3. 설정 링크에 이메일 토큰 채워넣기 (데일리 메일 쪽도 동일하게 수정해야 함!)
+  4. 답변 확인 버튼 이메일, 카테고리, 기간에 대한 정보 채워넣기
   -->
 
   <title>매일 메일</title>
@@ -87,55 +88,55 @@
               font-size: 15px;
               color: #2b2b2b;
               line-height: 1.5;
-              border: 1px solid #00a86b;
-              border-radius: 5px;
+              border: 0.5px solid #00a86b;
+              border-radius: 6px;
               padding: 0.5rem 1.2rem;
             ">
-          월: <span th:text="${질문1}">CSS Flexbox와 Grid의 차이점과 사용 사례에 대해 설명해주세요</span>
+          <span th:text="${질문1}">CSS Flexbox와 Grid의 차이점과 사용 사례에 대해 설명해주세요</span>
         </p>
         <p style="
               font-size: 15px;
               background-color: #F5FAF8;
               color: #2b2b2b;
               line-height: 1.5;
-              border: 1px solid #00a86b;
-              border-radius: 5px;
+              border: 0.5px solid #00a86b;
+              border-radius: 6px;
               padding: 0.5rem 1.2rem;
             ">
-          화: <span th:text="${질문2}">CSS Flexbox와 Grid의 차이점과 사용 사례에 대해 설명해주세요</span>
+          <span th:text="${질문2}">CSS Flexbox와 Grid의 차이점과 사용 사례에 대해 설명해주세요</span>
         </p>
         <p style="
               font-size: 15px;
               background-color: #F5FAF8;
               color: #2b2b2b;
               line-height: 1.5;
-              border: 1px solid #00a86b;
-              border-radius: 5px;
+              border: 0.5px solid #00a86b;
+              border-radius: 6px;
               padding: 0.5rem 1.2rem;
             ">
-          수: <span th:text="${질문3}">CSS Flexbox와 Grid의 차이점과 사용 사례에 대해 설명해주세요</span>
+          <span th:text="${질문3}">CSS Flexbox와 Grid의 차이점과 사용 사례에 대해 설명해주세요</span>
         </p>
         <p style="
              font-size: 15px;
               background-color: #F5FAF8;
               color: #2b2b2b;
               line-height: 1.5;
-              border: 1px solid #00a86b;
-              border-radius: 5px;
+              border: 0.5px solid #00a86b;
+              border-radius: 6px;
               padding: 0.5rem 1.2rem;
             ">
-          목: <span th:text="${질문4}">CSS Flexbox와 Grid의 차이점과 사용 사례에 대해 설명해주세요</span>
+          <span th:text="${질문4}">CSS Flexbox와 Grid의 차이점과 사용 사례에 대해 설명해주세요</span>
         </p>
         <p style="
              font-size: 15px;
               background-color: #F5FAF8;
               color: #2b2b2b;
               line-height: 1.5;
-              border: 1px solid #00a86b;
-              border-radius: 5px;
+              border: 0.5px solid #00a86b;
+              border-radius: 6px;
               padding: 0.5rem 1.2rem;
             ">
-          금: <span th:text="${질문5}">CSS Flexbox와 Grid의 차이점과 사용 사례에 대해 설명해주세요</span>
+          <span th:text="${질문5}">CSS Flexbox와 Grid의 차이점과 사용 사례에 대해 설명해주세요</span>
         </p>
       </div>
       <p style="
@@ -148,7 +149,8 @@
           ">
         아래 버튼을 눌러 이번 주차 질문들의 답변을 확인해 보세요!
       </p>
-      <a th:href="@{https://www.maeil-mail.kr/question/{id}(id = ${questionId})}" style="
+      <a th:href="www.maeil-mail.kr/question/mine/weekly?email=${이메일}&category=${카테고리 ex. backend}&year=${년도}&month=${달}&week=${주차}"
+        style="
               display: inline-block;
               padding: 15px 35px;
               background-color: #00a86b;
