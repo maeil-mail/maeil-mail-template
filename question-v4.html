@@ -95,7 +95,7 @@
             </a>
             <section style="text-align: center;">
                 <div
-                    style="background: url('https://maeil-mail-resource.s3.ap-northeast-2.amazonaws.com/mail-main-background.png'); padding: 54.5px 30px;">
+                    style="background: url('https://maeil-mail-resource.s3.ap-northeast-2.amazonaws.com/mail-main-background.png'); padding: 54.5px 30px; background-color: #00a86b;">
                     <p
                         style="font-size: 14px; color: #EEF8F5; font-weight: 550; margin: 0 auto 20px auto; width: fit-content;">
                         오늘의 질문
@@ -113,6 +113,7 @@
                 line-height: 1.4;
                 text-align: center;
                 word-break: keep-all;
+                overflow-wrap: break-word;
                 text-decoration: none;
                 " th:text="${question}"></p>
                     </div>
@@ -131,24 +132,26 @@
                     아래 버튼을 눌러 답변을 확인해 보시길 권장드려요!
                 </p>
                 <div style="margin: 0 auto; width: fit-content;">
-                    <a th:href="@{https://www.maeil-mail.kr/question/{id}(id = ${questionId})}" style="
-                display: inline-block;
-                padding: 10px 26px;
-                background: url('https://maeil-mail-resource.s3.ap-northeast-2.amazonaws.com/mail-button.png');
-                background-size: cover;
-                color: white;
-                text-decoration: none;
-                border-radius: 5px;
-                font-size: 16px;
-                font-weight: 600;
-                cursor: pointer;
-                line-height: 1.5;
-                margin-bottom: 44px;
-                width: fit-content;
-                cursor: pointer;
-                ">
-                        답변 확인
-                    </a>
+                    <span style="background-color: #00a86b; color: white;">
+                        <a th:href="@{https://www.maeil-mail.kr/question/{id}(id = ${questionId})}" style="
+                    display: inline-block;
+                    padding: 10px 26px;
+                    background: url('https://maeil-mail-resource.s3.ap-northeast-2.amazonaws.com/mail-button.png');
+                    background-size: cover;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    line-height: 1.5;
+                    margin-bottom: 44px;
+                    width: fit-content;
+                    cursor: pointer;
+                    ">
+                            답변 확인
+                        </a>
+                    </span>
                 </div>
                 <div style="height: 1px; width: 90%; background: #e1e1e1; margin: 0 auto;"></div>
                 <table role="presentation" style="
